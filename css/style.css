@@ -423,11 +423,12 @@
   .service-card-1 {
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
     background-size: 300%;
+    background-color: var(--color-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: var(--fw-bold);
-    animation: animate-gradient 4s infinite linear alternate;
+    animation: animate-gradient 2s infinite linear alternate;
   }
   
   .service-card-1 img {
