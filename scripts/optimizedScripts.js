@@ -136,3 +136,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function createProjectCard(project) {
+    return `
+      <div class="card">
+        <img src="${project.img}" alt="${project.title}">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <button onclick="window.open('${project.link}', '_blank')"> View </button>
+      </div>
+    `;
+  }
+  
+  function displayProjects() {
+    const cardContainer = document.querySelector('.projects-container');
+    const projectCardsHTML = projects.map(createProjectCard).join('');
+    cardContainer.innerHTML = projectCardsHTML;
+  }
+  
+  window.addEventListener('DOMContentLoaded', displayProjects);
